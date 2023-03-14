@@ -64,13 +64,17 @@ function getNumOfCharactersByEyeColor(eyeColor) {
     return charactersByEyeColor.length
 }
 // REDUCE solution
-function getNumOfCharactersByEyeColorReduce(eyeColor) {
-    let num = characters.reduce((prev, cur) => {
-        if(cur.eye_color === eyeColor) {
-            return prev + 1;
-        }
-    }, 0)
-}
+function getNumofCharactersByEyeColorReduce(eyeColor) {
+	let num = characters.reduce((prev, cur) => {
+  	if(cur.eye_color === eyeColor) {
+    	return prev + 1
+    } else {
+    	return prev + 0
+    }
+  },0)
+  return num;
+};
+
 //4. Get total number of characters in all the character names
 let character_count = characters.reduce((prev, cur) => {
     let nameNoSpace = cur.name.replace(' ','');
