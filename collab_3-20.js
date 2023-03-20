@@ -117,13 +117,36 @@ let genderSort = characters.sort((a, b) => {
 
 //***EVERY***
 //1. Does every character have blue eyes?
+let blueEyesCheck = characters.every(info => {
+    return info.eye_color === 'blue';
+})
 //2. Does every character have mass more than 40?
+let massCheck = characters.every(info => {
+    return info.mass > 40;
+})
 //3. Is every character shorter than 200?
+let heightCheck = characters.every((info) => {
+    return info.height < 200;
+})
 //4. Is every character male?
+let genderCheck = characters.every((info) => {
+    return info.gender === 'male';
+})
 
 //***SOME***
 //1. Is there at least one male character?
+let genderSome = characters.some(info => {
+    return info.gender === 'male';
+})
 //2. Is there at least one character with blue eyes?
+let eyeSome = characters.some(info => {
+    return info.eye_color === 'blue';
+})
 //3. Is there at least one character taller than 210?
-
+let heightSome = characters.some(info => {
+    return info.height > 210;
+})
 //4. Is there at least one character that has mass less than 50?
+let massSome = characters.some(info => {
+    return info.mass < 50;
+})
